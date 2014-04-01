@@ -1,0 +1,407 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #fafafa;
+	font-family: 'Roboto Slab', serif
+}
+.clr {
+	clear: both;
+	padding: 0;
+	margin: 0;
+	background: none;
+}
+a {
+	color: #2c2c2c;
+	text-decoration: none;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	transition: 0.5s;
+}
+a:hover {
+	color: #2c2c2c;
+	text-decoration: none;
+}
+/************ css header ***************/
+.header {
+	background: #000;
+	padding: 8px 0;
+}
+.header-resize {
+	width: 980px;
+	margin: 0 auto;
+}
+.header .logo {
+	width: 350px;
+	float: left;
+}
+.header .menu {
+	width: 480px;
+	float: right;
+}
+.header .menu nav {
+	display: block;
+	padding: 0;
+	margin: 0;
+	width: 350px;
+	float: left
+}
+.header .menu nav ul {
+	list-style: none;
+	float: left;
+	padding: 12px 0 0 0;
+	margin: 0;
+}
+.header .menu nav li {
+	float: left;
+	padding: 5px 17px;
+}
+.header .menu nav li.last {
+	padding: 5px 0 5px 17px;
+}
+.header .menu nav li a {
+	font-size: 17px;
+	color: #fff;
+	text-decoration: none;
+}
+.header .menu nav li a:hover {
+	color: #A7E76D;
+	text-decoration: none;
+}
+/************css banner  ***********/
+.banner {
+	width: 100%;
+	position: relative;
+	min-height: 320px;
+}
+.banner-resize {
+	width: 980px;
+	margin: 0 auto;
+}
+.banner .right {
+	width: 43%;
+	float: right;
+}
+.banner .right h1 {
+	color: #87D13D;
+	padding: 20px 0 35px 0;
+	margin: 0;
+	font-size: 48px;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
+}
+.banner .left {
+	width: 43%;
+	float: left;
+}
+.banner .left h2 {
+	font-weight: 300;
+	font-size: 56px;
+	margin: 40px 0 0 0;
+	padding: 0;
+}
+.banner .left .coffee-code {
+	background: url(../images/coffee-code.png) center no-repeat;
+	width: 102px;
+	height: 50px;
+	margin: -60px 0 0 190px;
+}
+/*************** form de cadastro ***************/
+#cadastro .input {
+	padding: 8px;
+	background: #fff;
+	border: 1px solid #ccc;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: inset 0px 1px 3px #bbb;
+	-webkit-box-shadow: inset 0px 1px 3px #bbb;
+	-moz-box-shadow: inset 0px 1px 3px #bbb;
+	color: #000;
+	font-family: 'Roboto Slab', serif;
+	float: left;
+	clear: both;
+	width: 400px;
+}
+#cadastro .btn-cadastro {
+	background: #7fbf4d;
+	background: -moz-linear-gradient(top, #7fbf4d, #63a62f);
+	background: -webkit-gradient(linear, left top, left bottom, from(#7fbf4d), to(#63a62f));
+	border-color: #63a62f;
+	box-shadow: 0 1px 2px #d6d6d6, inset 0 1px 0 #96d865;
+	color: #fff !important;
+	moz-box-shadow: 0 1px 2px #d6d6d6, inset 0 1px 0 #96d865;
+	text-shadow: 0 1px 0 #53961e;
+	webkit-box-shadow: 0 1px 2px #d6d6d6, inset 0 1px 0 #96d865;
+	border-radius: 5px;
+	font-size: 20px;
+	font-weight: normal;
+	moz-border-radius: 5px;
+	padding: 12px 15px;
+	webkit-border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	margin: 10px 0 0 0;
+	width: 415px;
+}
+#cadastro .btn-cadastro:hover, #cadastro .btn-cadastro:focus {
+	background: #76b347;
+	background: -moz-linear-gradient(top, #86c755, #5ea12a);
+	background: -webkit-gradient(linear, left top, left bottom, from(#86c755), to(#5ea12a));
+	border-color: #53961e;
+	box-shadow: 0 0 1px #d6d6d6, inset 0 1px 0 #96d865;
+	moz-box-shadow: 0 0 1px #d6d6d6, inset 0 1px 0 #96d865;
+	webkit-box-shadow: 0 0 1px #d6d6d6, inset 0 1px 0 #96d865
+}
+#cadastro .btn-cadastro:active {
+	background: #7fbf4d;
+	border-color: #53961e;
+	box-shadow: 0 1px 0 #fff, inset 0 0 5px #53961e;
+	moz-box-shadow: 0 1px 0 #fff, inset 0 0 5px #53961e;
+	webkit-box-shadow: 0 1px 0 #fff, inset 0 0 5px #53961e
+}
+/********** como funciona **************/
+.como-funciona {
+	width: 980px;
+	margin: 50px auto 25px auto
+}
+.como-funciona h1 {
+	font-size: 50px;
+	padding: 10px 0;
+	margin: 0;
+	text-align: center;
+	text-transform: uppercase
+}
+/******* Conteudo ***************/
+.content {
+	width: 980px;
+	padding: 10px 0;
+	margin: 0 auto
+}
+/* navegação */
+.content .left {
+	width: 200px;
+	float: left;
+	background: #eee;
+	padding: 10px;
+	margin: 0 10px 0 0
+}
+.content .left h1 {
+	font-size: 36px;
+	margin: 0;
+	padding: 0;
+}
+.content .left ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.content .left ul li {
+	float: left;
+	margin: 10px 0 10px 8px;
+	padding: 0;
+	width: 180px;
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 600;
+	color: #5ACA35;
+}
+.content .left ul li a {
+	color: #5ACA35;
+}
+.content .left ul li a:hover {
+	color: #5ACA35;
+	text-decoration: underline
+}
+.content .left ul ul li {
+	border-bottom: 1px solid #fff;
+	width: 180px;
+	margin: 0 0 0 5px;
+	padding: 10px 0;
+	text-transform: none;
+	font-size: 14px;
+}
+.content .left ul ul li a {
+	color: #999;
+}
+.content .left ul ul li a:hover {
+	color: #000;
+	text-decoration: none
+}
+/* arquivos acessados e chat online */
+.content .right {
+	width: 240px;
+	float: left;
+	background: #eee;
+	padding: 0;
+	margin: 0 0 0 10px
+}
+.content .right .user {
+	width: 240px;
+	float: left;
+	padding: 10px 0;
+	border-bottom: 1px solid #fff;
+}
+.content .right .user img {
+	width: 34px !important;
+	float: left;
+	margin: 5px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+}
+.content .right .user .nome {
+	font-size: 14px;
+	color: #000;
+	padding: 13px 0 0 0;
+	width: 150px;
+	float: left;
+}
+.content .right .user .nome a {
+	color: #000;
+}
+.content .right .user .nome a:hover {
+	color: #5ACA35;
+}
+.content .right .user .chat {
+	font-size: 10px;
+	background: #000;
+	color: #fff;
+	padding: 5px;
+	float: left;
+	margin: 5px 0 0 0;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.content .right h1 {
+	font-size: 23px;
+	margin: 0;
+	padding: 10px;
+	background: #fff;
+}
+.content .right ul {
+	list-style: none;
+	padding: 10px;
+	margin: 0;
+}
+.content .right ul li {
+	padding: 10px 3px;
+	margin: 0;
+	color: #000;
+	border-bottom: 1px solid #fff;
+	font-size: 12px
+}
+.content .right ul li a {
+	color: #000;
+}
+.content .right ul li a:hover {
+	color: #ccc;
+}
+/* conteudo */
+.content .center {
+	width: 500px;
+	float: left;
+}
+.content .center .post {
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.content .center .post h2 {
+	color: #2c2c2c;
+	padding: 0;
+	margin: 0
+}
+.content .center .post em {
+	color: #999;
+	padding: 5px 0;
+	margin: 0;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 300
+}
+.content .center .post texto {
+	margin: 10px 0 0 0;
+}
+.content .center .post texto p {
+	line-height: 1.5em;
+	font-size: 12px;
+	font-weight: 300;
+	color: #000;
+}
+.content .center .download {
+	background: #AAD83F;
+	padding: 10px;
+	color: #000;
+	font-weight: 700;
+	text-align: center;
+	font-size: 20px;
+	text-transform: uppercase;
+	width: 150px;
+	float: right;
+}
+.content .center .download a {
+	color: #000;
+}
+.content .center .download:hover {
+	background: #b8e945;
+	padding: 10px;
+	color: #000;
+	text-align: center;
+	font-size: 20px;
+	text-transform: uppercase;
+	width: 150px;
+	float: right;
+}
+.content .center .leia-mais {
+	background: #000;
+	padding: 10px;
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+	font-size: 20px;
+	text-transform: uppercase;
+	width: 150px;
+	float: right;
+}
+.content .center .leia-mais a {
+	color: #fff;
+}
+.content .center .leia-mais:hover {
+	background: #2c2c2c;
+	padding: 10px;
+	color: #fff;
+	font-weight: 700;
+	text-align: center;
+	font-size: 20px;
+	text-transform: uppercase;
+	width: 150px;
+	float: right;
+}
+/************* footer ***********/
+.footer {
+	background: #a9d879;
+	padding: 20px 0;
+	margin: 15px 0 0 0
+}
+.footer-resize {
+	width: 980px;
+	margin: 0 auto;
+	font-size: 12px
+}
+.footer .left {
+	width: 45%;
+	float: left
+}
+.footer .right {
+	width: 29%;
+	float: right
+}
+.footer a {
+	color: #84a95e;
+	padding: 0 10px;
+}
+.footer a:hover {
+	color: #fff;
+}
