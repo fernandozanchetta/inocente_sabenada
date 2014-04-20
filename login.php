@@ -2,7 +2,7 @@
 
 if(@$_GET['go'] == 'logar'){
   $user = $_POST['user'];
-  $pwd = $_POST['senha'];
+  $pwd = md5($_POST['senha']);
 
   if(empty($user)){
     echo "<script>alert('Preencha todos os campos para logar-se.'); history.back();</script>";

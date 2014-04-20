@@ -3,7 +3,7 @@ if(@$_GET['go'] == 'cadastrar'){
   $nome = $_POST['nome'];
   $email = $_POST['email'];
   $user = $_POST['user'];
-  $pwd = $_POST['senha'];
+  $pwd = md5($_POST['senha']);
 
   if(empty($nome)){
     echo "<script>alert('Preencha todos os campos para se cadastrar.'); history.back();</script>";
