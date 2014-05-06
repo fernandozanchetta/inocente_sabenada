@@ -18,7 +18,7 @@ if(@$_GET['go'] == 'cadastrar'){
     if($query1 == 1){
       echo "<script>alert('Usuário já existe.'); history.back();</script>"; 
     }else{
-      mysql_query("insert into usuarios (nome, usuario, email, senha) values ('$nome','$user','$email','$pwd')");
+      mysql_query("INSERT INTO usuarios (nome, usuario, email, senha) VALUES ('$nome', '$user', '$email', '$pwd')");
       echo "<script>alert('Usuário cadastrado com sucesso.');</script>";
       echo "<meta http-equiv='refresh' content='0, url=./'>";
     }
