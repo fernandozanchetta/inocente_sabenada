@@ -108,7 +108,7 @@ a:hover {
 	margin: -60px 0 0 190px;
 }
 /*************** form de cadastro ***************/
-#cadastro .input {
+.input {
 	padding: 8px;
 	background: #fff;
 	border: 1px solid #ccc;
@@ -120,7 +120,6 @@ a:hover {
 	-moz-box-shadow: inset 0px 1px 3px #bbb;
 	color: #000;
 	font-family: 'Roboto Slab', serif;
-	float: left;
 	clear: both;
 	width: 400px;
 }
