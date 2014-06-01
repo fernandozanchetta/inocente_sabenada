@@ -22,36 +22,11 @@
   <div class="clr"></div>
 </div>
 <div class="content">
-  <div class="left">
-    <h1>Navegação</h1>
-    <ul>
-      <li><a href="#">Estrutura de Dados</a>
-        <ul>
-          <li><a href="#">Aula 1 - Blablabla</a></li>
-          <li><a href="#">Aula 2 - Blablabla</a></li>
-          <li><a href="#">Aula 3 - Blablabla</a></li>
-          <li><a href="#">Aula 4 - Blablabla</a></li>
-          <li><a href="#">Aula 5 - Blablabla</a></li>
-          <li><a href="#">Aula 6 - Blablabla</a></li>
-        </ul>
-      </li>
-    </ul>
-    <ul>
-      <li><a href="#">Fundamentos da Administração</a>
-        <ul>
-          <li><a href="#">Aula 1 - Blablabla</a></li>
-          <li><a href="#">Aula 2 - Blablabla</a></li>
-          <li><a href="#">Aula 3 - Blablabla</a></li>
-          <li><a href="#">Aula 4 - Blablabla</a></li>
-          <li><a href="#">Aula 5 - Blablabla</a></li>
-          <li><a href="#">Aula 6 - Blablabla</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+  <?php include("materias.php"); ?>
   <div class="center">
     <div class="search">
-      <input type="text" name="search" id="search" class="input" placeholder="Procure seu artigo aqui!" /> 
+      <input type="text" name="search" id="search" style="width: 280px; padding: 12px;" class="input" placeholder="Procure seu artigo aqui!" />
+      <a href="javascript:;" onclick="ajaxload('novo_post.php');" class="download">Novo Artigo</a>
     </div>
     <div class="post" id="page">
       
