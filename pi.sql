@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 01-Jun-2014 às 19:52
+-- Generation Time: 02-Jun-2014 às 01:19
 -- Versão do servidor: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -23,6 +23,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `cursos`
+--
+
+CREATE TABLE IF NOT EXISTS `cursos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `curso` varchar(120) NOT NULL,
+  `descricao` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Extraindo dados da tabela `cursos`
+--
+
+INSERT INTO `cursos` (`id`, `curso`, `descricao`) VALUES
+(1, 'Sistemas de Informação', 'Sistemas de Informação é a expressão utilizada para descrever um Sistema seja ele automatizado (que pode ser denominado como Sistema Informacional Computadorizado), ou seja manual, que abrange pessoas, máquinas e/ou métodos organizados para coletar, proce'),
+(2, 'Engenharia da Camputação', 'Engenharia de Computação é o ramo da Engenharia que lida com a realização de projeto e construção de computadores e de sistemas que integram hardware e software, viabilizando a produção de novas máquinas e de equipamentos computacionais para serem utiliza');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `materias`
 --
 
@@ -32,7 +53,14 @@ CREATE TABLE IF NOT EXISTS `materias` (
   `descricao` varchar(255) NOT NULL,
   `clicks` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Extraindo dados da tabela `materias`
+--
+
+INSERT INTO `materias` (`id`, `materia`, `descricao`, `clicks`) VALUES
+(1, 'Estrutura de dados', 'Apenas um descrição demonstrativa', 2);
 
 -- --------------------------------------------------------
 
@@ -60,8 +88,19 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `modified` datetime NOT NULL,
   `usuario_id` int(11) NOT NULL,
   `downloads` int(11) NOT NULL,
+  `materia_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Extraindo dados da tabela `posts`
+--
+
+INSERT INTO `posts` (`id`, `conteudo`, `created`, `modified`, `usuario_id`, `downloads`, `materia_id`) VALUES
+(1, '', '2014-06-01 20:06:27', '0000-00-00 00:00:00', 4, 0, 0),
+(2, 'hue hue hue hu ehu ehue ', '2014-06-01 20:11:07', '0000-00-00 00:00:00', 4, 0, 0),
+(3, 'hue hue hue hu ehu ehue ', '2014-06-01 20:22:54', '0000-00-00 00:00:00', 4, 0, 0),
+(4, '', '2014-06-01 20:50:38', '0000-00-00 00:00:00', 4, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -76,6 +115,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `email` varchar(200) NOT NULL,
   `senha` text NOT NULL,
   `status` int(11) NOT NULL,
+  `curso_id` int(11) NOT NULL,
+  `localizacao` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
@@ -83,10 +124,10 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nome`, `usuario`, `email`, `senha`, `status`) VALUES
-(2, 'teste1', 'teste2', 'teste1@teste.com.br', 'e10adc3949ba59abbe56e057f20f883e', 0),
-(3, 'Diego Moreira', 'dinego', 'diegorm.ti@gmail.com', 'aa1bf4646de67fd9086cf6c79007026c', 0),
-(4, 'teste', 'generico2', 'generico2', '6f434d8e0317b82c2c25679e0a0e6678', 0);
+INSERT INTO `usuarios` (`id`, `nome`, `usuario`, `email`, `senha`, `status`, `curso_id`, `localizacao`) VALUES
+(2, 'teste1', 'teste2', 'teste1@teste.com.br', 'e10adc3949ba59abbe56e057f20f883e', 0, 0, ''),
+(3, 'Diego Moreira', 'dinego', 'diegorm.ti@gmail.com', 'aa1bf4646de67fd9086cf6c79007026c', 0, 0, ''),
+(4, 'teste', 'generico2', 'generico2', '6f434d8e0317b82c2c25679e0a0e6678', 0, 0, '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
