@@ -1,16 +1,26 @@
 <?php 
+include("config.php");
 session_start();
-var_dump($_SESSION);
+//var_dump($_SESSION);
 //die();
 	if (!empty($_POST)) {
 		echo '<script>alert("eae");</script>';
-		$conteudo = $_POST['conteudo'];
+		$conteudo = $_POST['artigo'];
 		$usuario_id = $_SESSION['user_id'];
-		$salva_artigo = mysql_query("INSERT INTO posts SET conteudo = '".$conteudo."', usuario_id = '".$usuario_id."', downloads = 0, created = '".date("Y-m-d H:i:s")."'");
+		$materia = $_POST['materia'];
+		$salva_artigo = mysql_query("INSERT INTO posts SET conteudo = '".$conteudo."', usuario_id = '".$usuario_id."', downloads = 0, materia = ".$materia.", created = '".date("Y-m-d H:i:s")."'");
 	}
 ?>
 <form id="novo_artigo" method="POST" action="novo_post.php">
 	<h3>Digite seu artigo e compartilhe com o mundo.</h3>
 	<textarea class="input" rows="10" name="artigo" placeholder="Digite aqui o seu artigo" style="float:none; width: 96%;" id="artigo"></textarea>
+	Qual Matéria deseja relacionar? <select name="materia">
+	<?php 
+		$rows_materias = mysql_query("select * from materias order by materia desc");
+		while ($materias = mysql_fetch_array($rows_materias)) {
+	?>
+		<option value="<?php echo $materias['id'] ?>"><?php echo $materias['materia'] ?></option>
+	<?php } ?>
+	</select>
 	<input type="button" onclick="salvaForm();" class="download" value="Publicar Artigo" style="width: 100%; float: none" id="salvar_artigo">
 </form>

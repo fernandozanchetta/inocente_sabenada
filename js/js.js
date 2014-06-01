@@ -28,8 +28,9 @@ function monitoraEstado() {
 		document.getElementById("page").innerHTML=ajax.responseText;  
 	}  
 } 
-
-function ajaxload(pagina){  
+var pagAtual;
+function ajaxload(pagina){ 
+	pagAtual = pagina;
 	ajax=CriaObjetoAjax(); 
 	if (ajax==null) { 
 		alert ("Este navegador não suporta Ajax"); 
@@ -49,7 +50,8 @@ function salvaForm() {
 		url: "novo_post.php",
 		data: dados,
 		success: function( data ) {
-			alert( data );
+			alert('Artigo publicado com sucesso!');
+			ajaxload(pagAtual);
 		},
 		error: function(xhr, error){
 		    console.debug(xhr); 
