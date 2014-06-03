@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.6
+-- version 3.4.11.1deb1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: 02-Jun-2014 às 01:19
--- Versão do servidor: 5.6.16
--- PHP Version: 5.5.9
+-- Máquina: localhost
+-- Data de Criação: 03-Jun-2014 às 20:39
+-- Versão do servidor: 5.5.37
+-- versão do PHP: 5.4.6-1ubuntu1.8
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `pi`
+-- Base de Dados: `pi`
 --
 
 -- --------------------------------------------------------
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `cursos` (
   `curso` varchar(120) NOT NULL,
   `descricao` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Extraindo dados da tabela `cursos`
@@ -90,17 +90,14 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `downloads` int(11) NOT NULL,
   `materia_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Extraindo dados da tabela `posts`
 --
 
 INSERT INTO `posts` (`id`, `conteudo`, `created`, `modified`, `usuario_id`, `downloads`, `materia_id`) VALUES
-(1, '', '2014-06-01 20:06:27', '0000-00-00 00:00:00', 4, 0, 0),
-(2, 'hue hue hue hu ehu ehue ', '2014-06-01 20:11:07', '0000-00-00 00:00:00', 4, 0, 0),
-(3, 'hue hue hue hu ehu ehue ', '2014-06-01 20:22:54', '0000-00-00 00:00:00', 4, 0, 0),
-(4, '', '2014-06-01 20:50:38', '0000-00-00 00:00:00', 4, 0, 0);
+(8, 'Teste 1 algo aqui que o fernando estÃ¡ falando que Ã© pra eu criar as coisa tudo bugada af Teste 1 algo aqui que o fernando estÃ¡ falando que Ã© pra eu criar as coisa tudo bugada afTeste 1 algo aqui que o fernando estÃ¡ falando que Ã© pra eu criar as coisa tudo bugada afTeste 1 algo aqui que o fernando estÃ¡ falando que Ã© pra eu criar as coisa tudo bugada af', '2014-06-02 21:13:45', '0000-00-00 00:00:00', 3, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -126,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nome`, `usuario`, `email`, `senha`, `status`, `curso_id`, `localizacao`) VALUES
 (2, 'teste1', 'teste2', 'teste1@teste.com.br', 'e10adc3949ba59abbe56e057f20f883e', 0, 0, ''),
-(3, 'Diego Moreira', 'dinego', 'diegorm.ti@gmail.com', 'aa1bf4646de67fd9086cf6c79007026c', 0, 0, ''),
+(3, 'Diego Moreira', 'dinego', 'diegorm.ti@gmail.com', 'aa1bf4646de67fd9086cf6c79007026c', 0, 1, 'localizaÃ§Ã£o do diego'),
 (4, 'teste', 'generico2', 'generico2', '6f434d8e0317b82c2c25679e0a0e6678', 0, 0, '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
