@@ -44,6 +44,11 @@ function ajaxload(pagina){
 
 function salvaForm() {
 	var dados = $('#novo_artigo').serialize();
+	if ($('#artigo').val() == "") {
+		alert('Preencha todos os campos');
+		return false;
+	}
+	
 
 	$.ajax({
 		type: "POST",
@@ -60,4 +65,51 @@ function salvaForm() {
 	});
 		
 	return false;
+}
+
+function atualizacadastro() {
+	var dados = $('#cadastro').serialize();	
+
+	$.ajax({
+		type: "POST",
+		url: "profile.php",
+		data: dados,
+		success: function( data ) {
+			alert('Cadastro atualizado com sucesso!');
+			ajaxload(pagAtual);
+		},
+		error: function(xhr, error){
+		    console.debug(xhr); 
+		    console.debug(error);
+		}
+	});
+		
+	return false;
+}
+
+function atualizasenha() {
+	var dados = $('#mudarsenha').serialize();
+	if ($("#senha").val() == $("#resenha").val()) {
+		if ($("#senha").val() != "" && $("#resenha").val() != "") {
+			$.ajax({
+				type: "POST",
+				url: "mudarsenha.php",
+				data: dados,
+				success: function( data ) {
+					alert('Senha atualizada com sucesso!');
+					ajaxload(pagAtual);
+				},
+				error: function(xhr, error){
+				    console.debug(xhr); 
+				    console.debug(error);
+				}
+			});
+				
+			return false;
+		} else {
+			alert("Senhas em branco");
+		}
+	} else {
+		alert("Senhas incompatíveis");
+	}
 }
