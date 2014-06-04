@@ -113,3 +113,25 @@ function atualizasenha() {
 		alert("Senhas incompatíveis");
 	}
 }
+
+function busca() {
+	var dados = $('#busca').serialize();
+	if ($("#busca").val() != "") {
+		$.ajax({
+			type: "GET",
+			url: "search.php",
+			data: dados,
+			success: function( data ) {
+
+			},
+			error: function(xhr, error){
+			    console.debug(xhr); 
+			    console.debug(error);
+			}
+		});
+			
+		return false;
+	} else {
+		alert("Senhas incompatíveis");
+	}
+}
