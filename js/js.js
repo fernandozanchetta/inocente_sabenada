@@ -1,5 +1,11 @@
 $(document).ready(function(){
 	ajaxload('homedash.php');
+	$("#search").keyup(function(event){
+	    if(event.keyCode == 13){
+	    	var valor = $("#search").val();
+	        ajaxload('search.php?search="valor"');
+	    }
+	});
 });
 
 

@@ -10,8 +10,6 @@
       <nav style="width:480px">
         <ul>
           <li><a href="javascript:;" onclick="ajaxload('profile.php');">Meu perfil</a></li>
-          <li><a href="javascript:;" onclick="ajaxload('artigos.php');">Artigos</a></li>
-          <li><a href="downloads.php">Downloads</a></li>
           <li class="last"><a href="logout.php">Sair</a></li>
         </ul>
         <div class="clr"></div>
