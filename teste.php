@@ -1,4 +1,5 @@
-<?php 
+<?php
+var_dump(date('D-m'));
 $origem = array( 1 => 1,1,2,2,2,3,4,4,5);
 $destino = array( 1 => 2,3,3,4,5,5,6,5,6);
 $custo = array( 1 => 1,3,1,2,3,2,3,-3,2);
@@ -109,3 +110,16 @@ for($x =1 ; $x <= ($nos-1) ; $x++) {
 	echo utf8_decode("<br> V: ");
 	print_r($v);}
 	?>
+  $increment = 0;
+  while ( $query1 <= 5) {
+    $destino = array( $increment => $query1['created']);
+    $increment++;
+  }
+
+  $query1 = mysql_query("SELECT * FROM posts") or die(mysql_error());
+  while ($result = mysql_fetch_array($query1)) {
+  	$data = explode(' ', $result['created']);
+  	$data = $data[1];
+  	$destino = array( $increment => $data);
+  	$increment++;
+  }

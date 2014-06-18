@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.11.1deb1
+-- version 4.1.6
 -- http://www.phpmyadmin.net
 --
--- Máquina: localhost
--- Data de Criação: 03-Jun-2014 às 20:39
--- Versão do servidor: 5.5.37
--- versão do PHP: 5.4.6-1ubuntu1.8
+-- Host: 127.0.0.1
+-- Generation Time: 18-Jun-2014 às 01:51
+-- Versão do servidor: 5.6.16
+-- PHP Version: 5.5.9
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de Dados: `pi`
+-- Database: `pi`
 --
 
 -- --------------------------------------------------------
@@ -83,6 +83,7 @@ CREATE TABLE IF NOT EXISTS `materias_usuarios` (
 
 CREATE TABLE IF NOT EXISTS `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(100) NOT NULL,
   `conteudo` text NOT NULL,
   `created` datetime NOT NULL,
   `modified` datetime NOT NULL,
@@ -90,14 +91,14 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `downloads` int(11) NOT NULL,
   `materia_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Extraindo dados da tabela `posts`
 --
 
-INSERT INTO `posts` (`id`, `conteudo`, `created`, `modified`, `usuario_id`, `downloads`, `materia_id`) VALUES
-(8, 'Teste 1 algo aqui que o fernando estÃ¡ falando que Ã© pra eu criar as coisa tudo bugada af Teste 1 algo aqui que o fernando estÃ¡ falando que Ã© pra eu criar as coisa tudo bugada afTeste 1 algo aqui que o fernando estÃ¡ falando que Ã© pra eu criar as coisa tudo bugada afTeste 1 algo aqui que o fernando estÃ¡ falando que Ã© pra eu criar as coisa tudo bugada af', '2014-06-02 21:13:45', '0000-00-00 00:00:00', 3, 0, 1);
+INSERT INTO `posts` (`id`, `titulo`, `conteudo`, `created`, `modified`, `usuario_id`, `downloads`, `materia_id`) VALUES
+(9, 'Teste para a apresentaÃ§Ã£o PI', 'Lorem Ipsum Ã© simplesmente uma simulaÃ§Ã£o de texto da indÃºstria tipogrÃ¡fica e de impressos, e vem sendo utilizado desde o sÃ©culo XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu nÃ£o sÃ³ a cinco sÃ©culos, como tambÃ©m ao salto para a editoraÃ§Ã£o eletrÃ´nica, permanecendo essencialmente inalterado. Se popularizou na dÃ©cada de 60, quando a Letraset lanÃ§ou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoraÃ§Ã£o eletrÃ´nica como Aldus PageMaker.', '2014-06-18 00:35:32', '0000-00-00 00:00:00', 4, 0, 1);
 
 -- --------------------------------------------------------
 
