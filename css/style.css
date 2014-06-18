@@ -404,3 +404,10 @@ a:hover {
 .footer a:hover {
 	color: #fff;
 }
+.ol{
+	list-style: circle;
+}
+.ul#myList
+{
+list-style-type:disc;
+}
